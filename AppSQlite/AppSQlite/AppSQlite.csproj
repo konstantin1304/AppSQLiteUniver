@@ -12,6 +12,13 @@
   <ItemGroup>
     <Compile Remove="EF\Entities\Friend.cs" />
     <Compile Remove="EF\Repositories\FriendRepository.cs" />
+    <Compile Remove="FriendListPage.xaml.cs" />
+    <Compile Remove="FriendPage.xaml.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Remove="FriendListPage.xaml" />
+    <EmbeddedResource Remove="FriendPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -20,10 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="FriendListPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="FriendPage.xaml">
+    <EmbeddedResource Update="StudentListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="TeacherListPage.xaml">

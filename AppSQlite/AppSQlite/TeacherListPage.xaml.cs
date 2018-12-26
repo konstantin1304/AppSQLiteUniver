@@ -32,7 +32,7 @@ namespace AppSQlite
             //    Debug.WriteLine(a.ToString());
             //}
 
-            var stud =
+            var teacher =
             (from l in Unit.AudLects.AllItems
              join g in Unit.Groups.AllItems
                  on l.Group.Id equals g.Id
@@ -62,18 +62,11 @@ namespace AppSQlite
 
         }).ToList();
 
-            depList.ItemsSource = stud;
+            depList.ItemsSource = teacher;
             base.OnAppearing();
-            //DisplayAlert("Alert", "Count of items:" + App.Database.AllItems.Count(), "OK");
+            
         }
-        //private async void OnItemSelected(object sender, SelectedItemChangedEventArgs e)
-        //{
-        //    Friend selectedFriend = (Friend)e.SelectedItem;
-        //    FriendPage friendPage = new FriendPage();
-        //    friendPage.BindingContext = selectedFriend;
-        //    await Navigation.PushAsync(friendPage);
-        //}
-        // обработка нажатия элемента в списке
+       
 
     }
 }
