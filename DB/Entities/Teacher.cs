@@ -10,7 +10,7 @@ namespace DB.Entities
     [Table("tbTeachers")]
     public class Teacher : AbstractDbEntity, IDbEntity
     {
-        
+
         //[StringLength(64)]
         public string FirstName { get; set; }
         //[StringLength(64)]
@@ -21,10 +21,10 @@ namespace DB.Entities
         [ForeignKey(typeof(Department))]
         public int DepId { get; set; }
 
-        [ManyToOne]
+        [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public Department Department { get; set; }
 
-        [OneToMany(CascadeOperations = CascadeOperation.All)]
+       [OneToMany(CascadeOperations = CascadeOperation.All)] 
         public List<TeachSubj> TeachSubj { get; set; }
 
         public override string ToString()

@@ -18,10 +18,10 @@ namespace DB.Entities
         [ForeignKey(typeof(TeachSubj))]
         public int TeachSubjId { get; set; }
 
-        [ManyToOne]
+        [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public Student Student { get; set; }
 
-        [ManyToOne]
+        [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public TeachSubj TeachSubj { get; set; }
 
     }

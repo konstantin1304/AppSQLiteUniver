@@ -4,18 +4,45 @@
              x:Class="AppSQlite.StudentListPage">
     <StackLayout>
         <ListView x:Name="studList" ItemsSource="{Binding}">
+            <ListView.Header>
+                <Grid BackgroundColor="Black">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Student" HorizontalOptions="Fill"  Grid.Column="0"   FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Group" HorizontalOptions="Fill"  Grid.Column="1"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Subject" HorizontalOptions="Fill"  Grid.Column="2"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Mark" HorizontalOptions="Fill"  Grid.Column="3"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    
+                </Grid>
+            </ListView.Header>
+
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <ViewCell>
-                        <ViewCell.View>
-                            <StackLayout Orientation="Horizontal">
-                                <Label Text="{Binding Name}" FontSize="Medium" />
-                            </StackLayout>
-                        </ViewCell.View>
+                        <Grid BackgroundColor="Black">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text ="{Binding Name}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="1" Text ="{Binding Subject}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="2" Text ="{Binding Group}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="3" Text ="{Binding Mark}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            
+                        </Grid>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>
         </ListView>
+        
 
     </StackLayout>
 </ContentPage>

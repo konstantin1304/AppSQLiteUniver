@@ -25,13 +25,20 @@ namespace DB.Common
         {
             get
             {
+                //return database.Table<T>()
                 return database.GetAllWithChildren<T>(null, false);
             }
         }
 
         public void AddItem(T item)
         {
-            database.InsertOrReplace(item);
+            database.Insert(item);
+            //database.InsertOrReplace(item);
+        }
+
+        public void AddItemWithChildren(T item)
+        {
+            database.InsertOrReplaceWithChildren(item,true);
         }
 
         public void AddItemsWithChildren(IEnumerable<T> items)
@@ -39,9 +46,9 @@ namespace DB.Common
             database.InsertOrReplaceAllWithChildren(items, false);
         }
 
-        public void AddItemWithChildren(T item)
+        public void AddItemsWithChildrenCascade(IEnumerable<T> items)
         {
-            database.InsertOrReplaceWithChildren(item, false);
+            database.InsertOrReplaceAllWithChildren(items, true);
         }
 
         public void ChangeItem(T item)

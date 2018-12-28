@@ -10,6 +10,5 @@ namespace DB.Abstract
         [PrimaryKey, AutoIncrement, Column("_id")]
         public int Id { get; set; }
 
-
     }
 }

@@ -10,15 +10,15 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="EF\Entities\Friend.cs" />
-    <Compile Remove="EF\Repositories\FriendRepository.cs" />
     <Compile Remove="FriendListPage.xaml.cs" />
     <Compile Remove="FriendPage.xaml.cs" />
+    <Compile Remove="StudPage.xaml.cs" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Remove="FriendListPage.xaml" />
     <EmbeddedResource Remove="FriendPage.xaml" />
+    <EmbeddedResource Remove="StudPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -33,10 +33,6 @@
     <EmbeddedResource Update="TeacherListPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="EF\Repositories\" />
   </ItemGroup>
 
   <ItemGroup>

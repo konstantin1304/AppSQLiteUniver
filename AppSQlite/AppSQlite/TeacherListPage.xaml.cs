@@ -58,11 +58,16 @@ namespace AppSQlite
                  //Teacher = teachers.LastName + " " + teachers.FirstName,
                  //Subject = ss.Name
 
-                 Name = $"{g.Name} {ts.Day} {ts.Start} {ts.Finish} {a.Name} {teachers.LastName} {ss.Name}"
+                 Name = $"{g.Name} {ts.Start} {ts.Finish} {a.Name} {teachers.LastName} {ss.Name}",
+                 Day = $" {ts.Day}",
+                 TimeStart = $"{ts.Start.Hour} : {ts.Start.Minute}",
+                 TimeFinish = $"{ts.Finish.Hour} : {ts.Finish.Minute}",
+                 Aud = $"{a.Name}",
+                 TeacherName = $"{ss.Name}"
 
         }).ToList();
 
-            depList.ItemsSource = teacher;
+            teachList.ItemsSource = teacher;
             base.OnAppearing();
             
         }

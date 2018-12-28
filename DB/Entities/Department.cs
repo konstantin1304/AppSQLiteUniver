@@ -12,7 +12,7 @@ namespace DB.Entities
     {
         public string Name { get; set; }
 
-        [OneToMany(CascadeOperations = CascadeOperation.All)]
+       [OneToMany(CascadeOperations = CascadeOperation.All)] 
         public List<Teacher> Teachers { get; set; }
     }
 }

@@ -22,16 +22,16 @@ namespace DB.Entities
         [ForeignKey(typeof(TeachSubj))]
         public int TeachSubjId { get; set; }
 
-        [ManyToOne]
+        [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public Audience Audience { get; set; }
 
-        [ManyToOne]
+        [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public Lection Lection { get; set; }
 
-        [ManyToOne]
+        [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public Group Group { get; set; }
 
-        [ManyToOne]
+        [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public TeachSubj TeachSubj { get; set; }
     }
 }

@@ -27,10 +27,13 @@ namespace DB.Entities
         [ForeignKey(typeof(Group))]
         public int GroupId { get; set; }
 
-        [OneToMany(CascadeOperations = CascadeOperation.All)]
+       [OneToMany(CascadeOperations = CascadeOperation.All)] 
         public List<Phone> Phones { get; set; }
 
-        [ManyToOne]
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
+        public List<Mark> Marks { get; set; }
+
+        [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public Group Group { get; set; }
         public override string ToString()
         {

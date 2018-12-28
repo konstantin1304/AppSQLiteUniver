@@ -20,8 +20,8 @@ namespace AppSQlite
 
         private async void ViewStudents(object sender, EventArgs e)
         {
-            StudentListPage studentListPage = new StudentListPage();
-            await Navigation.PushAsync(studentListPage);
+            StudentListPage studPage = new StudentListPage();
+            await Navigation.PushAsync(studPage);
         }
         
     }

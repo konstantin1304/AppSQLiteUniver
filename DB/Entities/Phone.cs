@@ -15,7 +15,7 @@ namespace DB.Entities
         [ForeignKey(typeof(Student))]
         public int StudId { get; set; }
 
-        [ManyToOne]
+        [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public Student Student { get; set; }
     }
 }
