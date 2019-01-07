@@ -25,7 +25,6 @@ namespace DB.Common
         {
             get
             {
-                //return database.Table<T>()
                 return database.GetAllWithChildren<T>(null, false);
             }
         }
@@ -33,7 +32,6 @@ namespace DB.Common
         public void AddItem(T item)
         {
             database.Insert(item);
-            //database.InsertOrReplace(item);
         }
 
         public void AddItemWithChildren(T item)

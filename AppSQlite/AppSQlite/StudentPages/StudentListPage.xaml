@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppSQlite.StudentListPage" Title="РАСПИСАНИЕ">
+    <StackLayout>
+        <ListView x:Name="studList" ItemsSource="{Binding}">
+            <ListView.Header>
+                <Grid BackgroundColor="Black">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        <ColumnDefinition Width="1*"></ColumnDefinition>
+                        
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Группа" HorizontalOptions="Fill"  Grid.Column="0"   FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="День" HorizontalOptions="Fill"  Grid.Column="1"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Начало" HorizontalOptions="Fill"  Grid.Column="2"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Окончание" HorizontalOptions="Fill"  Grid.Column="3"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Аудитоия" HorizontalOptions="Fill"  Grid.Column="4"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Преподаватель" HorizontalOptions="Fill"  Grid.Column="5"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Предмет" HorizontalOptions="Fill"  Grid.Column="6"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+
+                </Grid>
+            </ListView.Header>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid BackgroundColor="Black">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                <ColumnDefinition Width="1*"></ColumnDefinition>
+
+
+
+                            </Grid.ColumnDefinitions>
+                            <Label Grid.Column="0" Text ="{Binding Group}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="1" Text ="{Binding Day}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="2" Text ="{Binding TimeStart}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="3" Text ="{Binding TimeFinish}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="4" Text ="{Binding Aud}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="5" Text ="{Binding Teacher}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
+                            <Label Grid.Column="6" Text ="{Binding Subject}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
+
+
+                           
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        
+
+    </StackLayout>
+</ContentPage>

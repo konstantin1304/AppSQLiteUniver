@@ -10,9 +10,8 @@ namespace DB.Entities
     [Table("tbSubjects")]
     public class Subject : AbstractDbEntity, IDbEntity
     {
-        //[StringLength(64)]
         public string Name { get; set; }
-       [OneToMany(CascadeOperations = CascadeOperation.All)] 
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<TeachSubj> TeachSubj { get; set; }
     }
 }

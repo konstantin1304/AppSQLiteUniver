@@ -11,11 +11,8 @@ namespace DB.Entities
     public class Teacher : AbstractDbEntity, IDbEntity
     {
 
-        //[StringLength(64)]
         public string FirstName { get; set; }
-        //[StringLength(64)]
         public string MiddleName { get; set; }
-        //[StringLength(64)]
         public string LastName { get; set; }
 
         [ForeignKey(typeof(Department))]
@@ -24,7 +21,7 @@ namespace DB.Entities
         [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public Department Department { get; set; }
 
-       [OneToMany(CascadeOperations = CascadeOperation.All)] 
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<TeachSubj> TeachSubj { get; set; }
 
         public override string ToString()

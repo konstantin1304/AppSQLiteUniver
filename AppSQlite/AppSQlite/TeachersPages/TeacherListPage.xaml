@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppSQlite.TeacherListPage">
+             x:Class="AppSQlite.TeacherListPage" Title="РАСПИСАНИЕ">
     <StackLayout>
         <ListView x:Name="teachList" ItemsSource="{Binding}">
             <ListView.Header>
@@ -16,12 +16,12 @@
 
                     </Grid.ColumnDefinitions>
 
-                    <Label Text="Group" HorizontalOptions="Fill"  Grid.Column="0"   FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
-                    <Label Text="Day" HorizontalOptions="Fill"  Grid.Column="1"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
-                    <Label Text="Start" HorizontalOptions="Fill"  Grid.Column="2"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
-                    <Label Text="Finish" HorizontalOptions="Fill"  Grid.Column="3"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
-                    <Label Text="Audience" HorizontalOptions="Fill"  Grid.Column="4"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
-                    <Label Text="Teacher's Name" HorizontalOptions="Fill"  Grid.Column="5"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Группа" HorizontalOptions="Fill"  Grid.Column="0"   FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="День" HorizontalOptions="Fill"  Grid.Column="1"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Начало" HorizontalOptions="Fill"  Grid.Column="2"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Окончание" HorizontalOptions="Fill"  Grid.Column="3"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Аудитория" HorizontalOptions="Fill"  Grid.Column="4"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
+                    <Label Text="Предмет" HorizontalOptions="Fill"  Grid.Column="5"  FontSize="Medium" FontAttributes="Bold" BackgroundColor="DodgerBlue" TextColor="White" HorizontalTextAlignment="Center" Margin="1"/>
 
 
                    </Grid>
@@ -46,7 +46,8 @@
                             <Label Grid.Column="3" Text ="{Binding TimeFinish}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
                             <Label Grid.Column="4" Text ="{Binding Aud}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
                             <Label Grid.Column="5" Text ="{Binding TeacherName}" HorizontalOptions="Fill" BackgroundColor="LightBlue" HorizontalTextAlignment="Center" Margin="1"></Label>
-
+                            
+                            
 
                         </Grid>
                     </ViewCell>

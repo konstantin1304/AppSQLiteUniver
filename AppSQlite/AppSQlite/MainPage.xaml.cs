@@ -1,4 +1,5 @@
-﻿using DB.Entities;
+﻿using AppSQlite.StudentPages;
+using DB.Entities;
 using System;
 using System.Linq;
 using Xamarin.Forms;
@@ -14,13 +15,13 @@ namespace AppSQlite
                
         private async void ViewTeachers(object sender, EventArgs e)
         {
-            TeacherListPage teacherListPage = new TeacherListPage();
-            await Navigation.PushAsync(teacherListPage);
+            TeacherPage teacherPage = new TeacherPage();
+            await Navigation.PushAsync(teacherPage);
         }
 
         private async void ViewStudents(object sender, EventArgs e)
         {
-            StudentListPage studPage = new StudentListPage();
+            StudentPage studPage = new StudentPage();
             await Navigation.PushAsync(studPage);
         }
         

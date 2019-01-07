@@ -48,30 +48,19 @@ namespace AppSQlite
                  on teas.Subject.Id equals ss.Id
              select new
              {
-                 //l.Group.Id,
-                 //TeachID=teachers.Id,
-                 //Group = g.Name,
-                 //ts.Day,
-                 //ts.Start,
-                 //ts.Finish,
-                 //Audience = a.Name,
-                 //Teacher = teachers.LastName + " " + teachers.FirstName,
-                 //Subject = ss.Name
-
-                 Name = $"{g.Name} {ts.Start} {ts.Finish} {a.Name} {teachers.LastName} {ss.Name}",
+                 Name = $"{g.Name}",
                  Day = $" {ts.Day}",
                  TimeStart = $"{ts.Start.Hour} : {ts.Start.Minute}",
                  TimeFinish = $"{ts.Finish.Hour} : {ts.Finish.Minute}",
                  Aud = $"{a.Name}",
                  TeacherName = $"{ss.Name}"
-
-        }).ToList();
+             }).ToList();
 
             teachList.ItemsSource = teacher;
             base.OnAppearing();
-            
+
         }
-       
+
 
     }
 }

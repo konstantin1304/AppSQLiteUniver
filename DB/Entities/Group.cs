@@ -19,9 +19,9 @@ namespace DB.Entities
         [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public Speciality Speciality { get; set; }
 
-       [OneToMany(CascadeOperations = CascadeOperation.All)] 
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<Student> Students { get; set; }
-       [OneToMany(CascadeOperations = CascadeOperation.All)] 
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<AudLect> AudLects { get; set; }
         public override string ToString()
         {

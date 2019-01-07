@@ -28,7 +28,8 @@ namespace AppSQlite
         public App()
         {
             InitializeComponent();
-            MainPage = new NavigationPage(new MainPage());
+            MainPage = new NavigationPage(new MainPage()) { BarBackgroundColor = Color.DodgerBlue };
+            
         }
 
         protected override void OnStart() { }

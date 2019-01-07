@@ -22,9 +22,10 @@ namespace DB.Entities
         [ManyToOne(CascadeOperations = CascadeOperation.All)]
         public Subject Subject { get; set; }
 
-       [OneToMany(CascadeOperations = CascadeOperation.All)] 
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<Mark> Marks { get; set; }
-       [OneToMany(CascadeOperations = CascadeOperation.All)] 
+
+        [OneToMany(CascadeOperations = CascadeOperation.All)]
         public List<AudLect> AudLects { get; set; }
     }
 }
