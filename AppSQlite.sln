@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AppSQlite.Android", "AppSQl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppSQlite", "AppSQlite\AppSQlite\AppSQlite.csproj", "{89680D6C-981F-41D7-A023-1DC599225D70}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DB", "DB\DB.csproj", "{8216C20D-A7E9-42D2-ABED-FB7D6E17B889}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DB", "DB\DB.csproj", "{8216C20D-A7E9-42D2-ABED-FB7D6E17B889}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestProject", "..\AppSQLiteUniverUnit\TestProject\TestProject.csproj", "{69171623-66C9-44B4-8CAD-9AAA8AAAAB14}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,10 @@ Global
 		{8216C20D-A7E9-42D2-ABED-FB7D6E17B889}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8216C20D-A7E9-42D2-ABED-FB7D6E17B889}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8216C20D-A7E9-42D2-ABED-FB7D6E17B889}.Release|Any CPU.Build.0 = Release|Any CPU
+		{69171623-66C9-44B4-8CAD-9AAA8AAAAB14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{69171623-66C9-44B4-8CAD-9AAA8AAAAB14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{69171623-66C9-44B4-8CAD-9AAA8AAAAB14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{69171623-66C9-44B4-8CAD-9AAA8AAAAB14}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
